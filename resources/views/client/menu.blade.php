@@ -4,7 +4,7 @@
 
     @include('client._partials.header')
 
-    </header>
+    
 
     <main>
         <h2>Menu</h2>
