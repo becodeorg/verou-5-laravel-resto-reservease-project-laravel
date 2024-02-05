@@ -1,3 +1,3 @@
-### Crazy-resto-reservation-website
+# Crazy-resto-reservation-website
 
 Welcom!
