@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
 //NAVIGATION CLIENT SIDE
 
 Route::get('/', function () {return view('client.menu');});
@@ -26,6 +25,7 @@ Route::get('/about', function () {return view('client.about');});
 
 Route::get('/employees', function () {return view('employees.calendar');});
 Route::get('/employees/kitchen', function () {return view('employees.kitchen');});
+
 Route::get('/employees/tables', function () {return view('employees.tables');});
 
 //LOGIN SYSTEM
@@ -34,8 +34,5 @@ Route::post('/employees/login', [UserController::class, 'login']);
 Route::post('/employees/logout', [UserController::class, 'logout']);
 
 
-=======
-Route::get('/', function () {
-    return view('home');
-});
->>>>>>> 5918712 (test)
+
+Route::get('/employees/tables', function () {return view('employees.tables');});
