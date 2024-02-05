@@ -8,4 +8,7 @@
         </ul>
     </nav>
     <a href="/">Back to client side</a>
+    <form action="/employees/logout">
+        <button>Logout</button>
+    </form>
 </header>
