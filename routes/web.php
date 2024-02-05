@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
 //NAVIGATION CLIENT SIDE
 
 Route::get('/', function () {return view('client.menu');});
@@ -33,3 +34,8 @@ Route::post('/employees/login', [UserController::class, 'login']);
 Route::post('/employees/logout', [UserController::class, 'logout']);
 
 
+=======
+Route::get('/', function () {
+    return view('home');
+});
+>>>>>>> 5918712 (test)
