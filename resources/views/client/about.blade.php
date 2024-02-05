@@ -9,7 +9,6 @@
     </main>
 
     <footer>
-        <a href="/employees">Employees</a>
     </footer>
 </body>
 

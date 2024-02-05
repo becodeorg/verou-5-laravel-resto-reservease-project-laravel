@@ -13,14 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('client.menu');
-});
+//NAVIGATION CLIENT SIDE
 
-Route::get('/reservations', function () {
-    return view('client.reservations');
-});
+Route::get('/', function () {return view('client.menu');});
+Route::get('/reservations', function () {return view('client.reservations');});
+Route::get('/about', function () {return view('client.about');});
 
-Route::get('/about', function () {
-    return view('client.menu');
-});
+
+//NAVIGATION EMPLOYEES SIDE
+
+Route::get('/employees', function () {return view('employees.calendar');});
+Route::get('/employees/kitchen', function () {return view('employees.kitchen');});
+Route::get('/employees/tables', function () {return view('employees.tables');});
+
+
