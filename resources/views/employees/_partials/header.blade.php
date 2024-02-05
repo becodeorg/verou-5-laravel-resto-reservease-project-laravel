@@ -1,5 +1,5 @@
 <header>
-    <h1>Restaurant Manager Side</h1>
+    <h1>Restaurant Dashboard</h1>
     <nav>
         <ul>
             <li><a href="/employees">Calendar</a></li>
