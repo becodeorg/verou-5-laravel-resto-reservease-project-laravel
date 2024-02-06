@@ -4,7 +4,7 @@
 
     @auth
 
-    @include('employees._partials.header')
+    @include('users._partials.header')
 
     <main>
         <h2>Calendar</h2>
@@ -13,18 +13,18 @@
     
     @else
     
-    @include('employees._partials.header')
+    @include('users._partials.header')
 
     <main>
         <h2>Login</h2>
-        <form action="/employees/login" method="POST">
+        <form action="/users/login" method="POST">
             @csrf
             <input type="text" name="name" placeholder="Name"><br>
             <input type="password" name="password" placeholder="Password"><br>
             <button>Login</button>
         </form>
         <h2>Register</h2>
-        <form action="/employees/register" method="POST">
+        <form action="/users/register" method="POST">
             @csrf
             <input type="text" name="name" placeholder="Name"><br>
             <input type="text" name="email" placeholder="Email"><br>
