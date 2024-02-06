@@ -9,6 +9,6 @@
         <h1>RESTO EZ</h1>
         <span>(short for Restaurant Easy)</span>
     </div>
-    <a class="dashboardlink" href="/employees">Dashboard</a>
+    <a class="dashboardlink" href="/login">Dashboard</a>
 </header>
 

@@ -20,6 +20,9 @@ Route::get('/', function () {return view('client.menu');});
 Route::get('/reservations', function () {return view('client.reservations');});
 Route::get('/about', function () {return view('client.about');});
 
+Route::get('/login', function () {return view('employees.login');});
+Route::get('/register', function () {return view('employees.register');});
+
 
 //NAVIGATION EMPLOYEES SIDE
 
