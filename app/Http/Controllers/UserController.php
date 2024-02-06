@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
+
 
 class UserController extends Controller
 {
@@ -27,11 +29,11 @@ class UserController extends Controller
             $user = User::create($incomingFields);
             auth()->login($user);
         };
-        return redirect('/users');
+        return redirect('/employees');
     }
 
     public function login(Request $request) {
-        return redirect('/users');
+        return redirect('/employees');
     }
 
     public function logout(Request $request) {
