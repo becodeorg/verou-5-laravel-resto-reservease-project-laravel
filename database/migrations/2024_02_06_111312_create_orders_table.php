@@ -13,10 +13,15 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('table_id');
+            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('user_id');
+            $table->timestamps();
+
+            // Foreign key constraints:
             $table->foreign('table_id')->references('id')->on('tables');
             $table->foreign('product_id')->references('id')->on('products');
-            $table->foreign('users_id')->references('id')->on('users');
-            $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
