@@ -1,3 +1,5 @@
+@include('client._partials._head')
+
 <body>
 
     @include('client._partials.header')
