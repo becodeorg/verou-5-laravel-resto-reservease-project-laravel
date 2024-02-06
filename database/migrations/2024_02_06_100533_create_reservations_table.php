@@ -16,9 +16,12 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->timestamp('timestamp'); // Timestamp field for reservation time
-            $table->foreign('table_id')->references('id')->on('tables');
+            $table->unsignedBigInteger('table_id');
             $table->text('notes')->nullable();
             $table->timestamps();
+
+            // Foreing key constraints:
+            $table->foreign('table_id')->references('id')->on('tables');
         });
     }
 
