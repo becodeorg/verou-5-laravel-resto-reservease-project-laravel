@@ -10,7 +10,7 @@
     </nav>
     <div class="title">
         <h1>Reserv'Ease</h1>
-        <span>(short for Reserve Easy)</span>
+        {{-- <span>(short for Reserve Easy)</span> --}}
     </div>
     <a class="dashboardlink" href="/login">Dashboard</a>
 </header>
