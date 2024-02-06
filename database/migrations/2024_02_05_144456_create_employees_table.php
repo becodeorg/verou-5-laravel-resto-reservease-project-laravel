@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id(); // auto-incremental 
             $table->string('name'); // name column
-            $table->string('email')->unique(); // Email column with unique constraint
+            // $table->string('email')->unique(); // Email column with unique constraint
             $table->string('password'); // password column
             $table->timestamps(); // tracking record timestamps
         });

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -14,7 +15,9 @@ class UserController extends Controller
         ]);
 
         if ($request['password'] === $request['password-check']) {
-            dd($request);
+            $inputs['password'] = bcrypt($inputs['password']);
+            $user = User::create($inputs);
+            auth()->login($user);
         };
         return redirect('/employees');
     }
