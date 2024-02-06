@@ -19,8 +19,8 @@
         <h2>Login</h2>
         <form action="/employees/login" method="POST">
             @csrf
-            <input type="text" name="name" placeholder="Name"><br>
-            <input type="password" name="password" placeholder="Password"><br>
+            <input type="text" name="loginname" placeholder="Name"><br>
+            <input type="password" name="loginpassword" placeholder="Password"><br>
             <button>Login</button>
         </form>
         <h2>Register</h2>
