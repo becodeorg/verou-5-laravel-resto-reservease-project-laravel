@@ -13,7 +13,8 @@
     <div class="dashboardlink">
         <a href="/">Back to client side</a>
         @auth
-        <form action="/employees/logout">
+        <form action="/employees/logout" method="POST">
+            @csrf
             <button>Logout</button>
         </form>
         @endauth

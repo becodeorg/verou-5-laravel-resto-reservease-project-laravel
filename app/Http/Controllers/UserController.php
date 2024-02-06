@@ -9,8 +9,8 @@ class UserController extends Controller
 {
     public function register(Request $request) {
         $incomingFields = $request->validate([
-            'name' => ['required', 'min:3', 'max:12'],
-            'email' => ['required', 'email'],
+            'name' => ['required', 'min:3', 'max:12', Rule::unique('users','name')],
+            'email' => ['required', 'email', Rule::unique('users','email')],
             'password' => ['required','min:5'], 
             'password-check' => ['required','min:5', 'same:password']
         ], [
@@ -27,11 +27,11 @@ class UserController extends Controller
             $user = User::create($incomingFields);
             auth()->login($user);
         };
-        return redirect('/employees');
+        return redirect('/users');
     }
 
     public function login(Request $request) {
-        return redirect('/employees');
+        return redirect('/users');
     }
 
     public function logout(Request $request) {
