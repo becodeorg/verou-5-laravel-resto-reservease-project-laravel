@@ -9,8 +9,8 @@
         <a href="/about">About</a>
     </nav>
     <div class="title">
-        <h1>RESTO EZ</h1>
-        <span>(short for Restaurant Easy)</span>
+        <h1>Reserv'Ease</h1>
+        <span>(short for Reserve Easy)</span>
     </div>
     <a class="dashboardlink" href="/login">Dashboard</a>
 </header>
