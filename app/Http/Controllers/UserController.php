@@ -26,7 +26,7 @@ class UserController extends Controller
         auth()->logout();
         return redirect('/');
     }
-
+// jdkfj
 
     public function register(Request $request) {
         $incomingFields = $request->validate([
