@@ -23,16 +23,16 @@ Route::get('/about', function () {return view('client.about');});
 
 //NAVIGATION EMPLOYEES SIDE
 
-Route::get('/employees', function () {return view('employees.calendar');});
-Route::get('/employees/kitchen', function () {return view('employees.kitchen');});
+Route::get('/users', function () {return view('users.calendar');});
+Route::get('/users/kitchen', function () {return view('users.kitchen');});
 
-Route::get('/employees/tables', function () {return view('employees.tables');});
+Route::get('/users/tables', function () {return view('users.tables');});
 
 //LOGIN SYSTEM
-Route::post('/employees/register', [UserController::class, 'register']);
-Route::post('/employees/login', [UserController::class, 'login']);
-Route::post('/employees/logout', [UserController::class, 'logout']);
+Route::post('/users/register', [UserController::class, 'register']);
+Route::post('/users/login', [UserController::class, 'login']);
+Route::post('/users/logout', [UserController::class, 'logout']);
 
 
 
-Route::get('/employees/tables', function () {return view('employees.tables');});
+Route::get('/users/tables', function () {return view('users.tables');});
