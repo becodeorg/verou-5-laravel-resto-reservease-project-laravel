@@ -1,6 +1,7 @@
 <header>
     <nav>
         <img src="{{ asset('images/burgerlogowhite.svg') }}">
+        <img src="{{ asset('images/burgerman_ogen_toe.svg') }}">
         @auth
         <a href="/employees">Calendar</a>
         <a href="/employees/tables">Tables</a>
