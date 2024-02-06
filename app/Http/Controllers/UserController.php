@@ -8,15 +8,23 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function register(Request $request) {
-        $inputs = $request->validate([
-            'name' => 'required|min:3',
-            'password' => 'required|min:3', 
-            'password-check' => 'required|min:3'
+        $incomingFields = $request->validate([
+            'name' => ['required', 'min:3', 'max:12'],
+            'email' => ['required', 'email'],
+            'password' => ['required','min:5'], 
+            'password-check' => ['required','min:5', 'same:password']
+        ], [
+            'name.required' => 'The name field is required.',
+            'name.min' => 'The name must be at least :min characters.',
+            'name.max' => 'The name may not be greater than :max characters.',
+            'email.required' => 'The email field is required.',
+            'email.email' => 'Please enter a valid email address.',
+            'password-check.same' => "Passwords do not match, please try again"
         ]);
 
         if ($request['password'] === $request['password-check']) {
-            $inputs['password'] = bcrypt($inputs['password']);
-            $user = User::create($inputs);
+            $incomingFields['password'] = bcrypt($incomingFields['password']);
+            $user = User::create($incomingFields);
             auth()->login($user);
         };
         return redirect('/employees');
