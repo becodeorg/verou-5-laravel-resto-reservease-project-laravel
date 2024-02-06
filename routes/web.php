@@ -32,7 +32,7 @@ Route::get('/users/tables', function () {return view('users.tables');});
 Route::post('/users/register', [UserController::class, 'register']);
 Route::post('/users/login', [UserController::class, 'login']);
 Route::post('/users/logout', [UserController::class, 'logout']);
-
+Route::get('/users/logout', [UserController::class, 'logout']);
 
 
 Route::get('/users/tables', function () {return view('users.tables');});
