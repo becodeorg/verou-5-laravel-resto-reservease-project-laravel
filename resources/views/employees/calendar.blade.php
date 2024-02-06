@@ -8,6 +8,7 @@
 
     <main>
         <h2>Calendar</h2>
+        <p>Yo man, you're logged in!</p>
     </main>
     
     @else
@@ -24,8 +25,8 @@
         <form action="/employees/register" method="POST">
             @csrf
             <input type="text" name="name" placeholder="Name"><br>
-            <input type="password" name="password" placeholder="Paswword"><br>
-            <input type="password" name="password-check" placeholder="Paswword Check"><br>
+            <input type="password" name="password" placeholder="Password"><br>
+            <input type="password" name="password-check" placeholder="Password Check"><br>
             <button>Register</button>
         </form>
     </main>
