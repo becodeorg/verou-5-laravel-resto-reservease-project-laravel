@@ -20,8 +20,8 @@
             @csrf
             <button>Logout</button>
         </form>
-    @endauth
-</div>
+        @endauth
+    </div>
 </header>
 
 
