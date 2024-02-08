@@ -1,7 +1,11 @@
 <?php
 
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\http\Controllers\HomeController;
+use App\http\Controllers\RegisterController;
+use App\http\Controllers\DashboardController;
+use App\http\Controllers\ReservationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,26 +19,35 @@ use Illuminate\Support\Facades\Route;
 */
 
 //NAVIGATION CLIENT SIDE
+Route::get('/', function () {return view('home.index');})->name("home");
+Route::get('/Menu', function () {return view('menu.index');})->name("menu");
+Route::get('/Reservation', [ReservationController::class, 'index'])->name("reservations");
+Route::get('/About', function () {return view('about.index');})->name("about");
+Route::get('/Contact', function () {return view('contact.index');})->name("contact");
 
-Route::get('/', function () {return view('client.menu');});
-Route::get('/reservations', function () {return view('client.reservations');});
-Route::get('/about', function () {return view('client.about');});
+// Route::get('/login', function () {return view('employees.login');});
 
-Route::get('/login', function () {return view('employees.login');});
-Route::get('/register', function () {return view('employees.register');});
+
 
 
 //NAVIGATION EMPLOYEES SIDE
-
-Route::get('/employees', function () {return view('employees.calendar');});
+Route::get('/Dashboard', [DashboardController::class, 'index'])->name("showDashboard");
+Route::get('/Dashboard/Reservations', [DashboardController::class, 'show'])->name("showReservations");
+Route::get('/Dashboard/Kitchen', [DashboardController::class, 'editKitchen'])->name("editKitchen");
+// Route::get('/Dashboard/', [DashboardController::class, 'index'])->name("");
+// Route::get('/employees', function () {return view('employees.calendar');});
 Route::get('/employees/kitchen', function () {return view('employees.kitchen');});
 
 Route::get('/employees/tables', function () {return view('employees.tables');});
 
-//LOGIN SYSTEM
-Route::post('/employees/register', [UserController::class, 'register']);
-Route::post('/employees/login', [UserController::class, 'login']);
-Route::post('/employees/logout', [UserController::class, 'logout']);
+// LOGIN & LOGOUT
+Route::get('/Login', [UserController::class, 'index'])->name("showLogin");
+Route::post('/Login', [UserController::class, 'login'])->name("postLogin");
+Route::post('/Logout', [UserController::class, 'logout'])->name("postLogout");
+
+// REGISTRATION
+Route::get("/Register", [RegisterController::class, 'index'])->name("showRegister");
+Route::post("/Register", [RegisterController::class, 'register'])->name("handleRegister");
 
 
-Route::get('/employees/tables', function () {return view('employees.tables');});
+// Route::get('/employees/tables', function () {return view('employees.tables');});
