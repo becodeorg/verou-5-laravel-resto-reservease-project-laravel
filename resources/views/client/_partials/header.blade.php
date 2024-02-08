@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
     <nav>
         <div class="svg-container">
             <object id="svg1" type="image/svg+xml" data="{{ asset('images/burgerlogowhite.svg') }}"></object>
@@ -36,5 +36,5 @@
 
     // Call the toggleSVGs function at regular intervals (e.g., every 3 seconds)
     setInterval(toggleSVGs, 3000); // Adjust the interval as needed
-</script>
+</script> -->
 

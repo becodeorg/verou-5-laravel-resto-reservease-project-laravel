@@ -1,4 +1,4 @@
-@include('client._partials._head')
+<!-- @include('client._partials._head')
 
 <body>
 
@@ -40,4 +40,4 @@
     </footer>
 </body>
 
-</html>
+</html> -->
