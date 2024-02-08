@@ -9,8 +9,8 @@
         <a href="/about">About</a>
     </nav>
     <div class="title">
-        <h1>Reserv'Ease</h1>
-        {{-- <span>(short for Reserve Easy)</span> --}}
+        <h1>ReservEase for Ziekenboeg</h1>
+        <span>(By the sick for the sick!)</span>
     </div>
     <a class="dashboardlink" href="/login">Dashboard</a>
 </header>
