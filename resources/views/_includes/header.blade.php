@@ -4,32 +4,30 @@
       <object id="svg1" type="image/svg+xml" data="{{ asset('images/burgerlogowhite.svg') }}"></object>
       <object id="svg2" type="image/svg+xml" data="{{ asset('images/burgerman_ogen_toe.svg') }}"></object>
     </div>
-    <ul>
-      <li><a href="{{ route('home') }}">Home</a></li>
-      @guest
-      <li><a href="{{ route('menus') }}">Menu</a></li>
-      <li><a href="{{ route('reservations.create') }}">Reservation</a></li>
-      <li><a href="{{ route('about') }}">About Us</a></li>
-      <li><a href="{{ route('contact') }}">Contact</a></li>
-      </nav>
-      <div class="title">
-        <h1>ReservEase for Ziekenboeg</h1>
-        {{-- <span>(By the sick for the sick!)</span> --}}
-      </div>
-      <a class="dashboardlink" href="{{ route('login') }}">Dashboard</a>
-      @endguest
-
-      @auth
-      <h2>Welcome to the ReservEase platform, {{ auth()->user()->name }}!</h2>
-      <div class="dashboardlink">
-        <a href="{{ route('home') }}">Back to client side</a>
-        <form action="/employees/logout" method="POST">
-          @csrf
-          <button>Logout</button>
-        </form>
-      </div>
-      @endauth
-    </ul>
+    @guest
+    <a href="{{ route('home') }}">Home</a>
+    <a href="{{ route('menu') }}">Menu</a>
+    <a href="{{ route('reservations') }}">Reservation</a>
+    <a href="{{ route('about') }}">About Us</a>
+    <a href="{{ route('contact') }}">Contact</a>
+    <div class="title">
+      <h1>ReservEase for Ziekenboeg</h1>
+      {{-- <span>(By the sick for the sick!)</span> --}}
+    </div>
+    <a class="dashboardlink" href="{{ route('showLogin') }}">Dashboard</a>
+    @endguest
+    @auth
+    <a href="{{ route('showDashboard') }}">Mainboard</a>
+    <a href="{{ route('showReservations') }}">Bookings</a>
+    <a href="{{ route('editKitchen') }}">Kitchen</a>
+    <div class="dashboardlink">
+      <a href="{{ route('home') }}">client side</a>
+      <form action="/Logout" method="POST">
+        @csrf
+        <button>Logout</button>
+      </form>
+    </div>
+    @endauth
   </nav>
 </header>
 
