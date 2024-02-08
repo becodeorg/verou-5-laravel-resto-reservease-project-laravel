@@ -1,4 +1,4 @@
-@include('employees._partials._head')
+<!-- @include('employees._partials._head')
 
 <body>
 
@@ -40,4 +40,4 @@
 
 </body>
 
-</html>
+</html> -->
