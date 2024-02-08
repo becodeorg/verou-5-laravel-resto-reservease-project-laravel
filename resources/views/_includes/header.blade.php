@@ -13,7 +13,7 @@
       <li><a href="{{ route('contact') }}">Contact</a></li>
       </nav>
       <div class="title">
-        <h1>ReservEase Ziekenboeg</h1>
+        <h1>ReservEase for Ziekenboeg</h1>
         {{-- <span>(By the sick for the sick!)</span> --}}
       </div>
       <a class="dashboardlink" href="{{ route('login') }}">Dashboard</a>
