@@ -29,7 +29,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  width: calc(100% / 3);
+  width: 100%;
 }
 
 .svg-container {
@@ -57,7 +57,7 @@ nav a {
 .title {
   width: 100%;
   text-align: center;
-  width: calc(100% / 3);
+  width: calc(100% / 2);
   color: whitesmoke;
 }
 
@@ -80,7 +80,7 @@ a:hover {
 }
 
 .dashboardlink {
-  width: calc(100% / 3);
+  width: calc(100% / 5);
   text-align: right;
 }
 
