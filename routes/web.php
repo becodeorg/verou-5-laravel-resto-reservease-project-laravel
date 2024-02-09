@@ -49,5 +49,14 @@ Route::post('/Logout', [UserController::class, 'logout'])->name("postLogout");
 Route::get("/Register", [RegisterController::class, 'index'])->name("showRegister");
 Route::post("/Register", [RegisterController::class, 'register'])->name("handleRegister");
 
+Route::resource('menus', 'MenuController');
+Route::resource('orders', 'OrderController');
+Route::resource('products', 'ProductController');
+Route::resource('reservations', 'ReservationController');
+Route::resource('tables', 'TableController');
+
+
+
+
 
 // Route::get('/employees/tables', function () {return view('employees.tables');});
