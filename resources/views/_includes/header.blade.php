@@ -8,11 +8,10 @@
     <a href="{{ route('home') }}">Home</a>
     <a href="{{ route('menu') }}">Menu</a>
     <a href="{{ route('reservations') }}">Reservation</a>
-    <a href="{{ route('about') }}">About Us</a>
+    <a href="{{ route('about') }}">About</a>
     <a href="{{ route('contact') }}">Contact</a>
     <div class="title">
       <h1>ReservEase for Ziekenboeg</h1>
-      {{-- <span>(By the sick for the sick!)</span> --}}
     </div>
     <a class="dashboardlink" href="{{ route('showLogin') }}">Dashboard</a>
     @endguest
