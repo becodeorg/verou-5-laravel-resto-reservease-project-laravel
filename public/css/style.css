@@ -20,7 +20,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5%;
+  padding: 0 2%;
   background-color: rgb(119, 78, 57);
   height: 100px;
   width: 100%;
@@ -29,7 +29,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 96%;
 }
 
 .svg-container {
@@ -50,7 +50,7 @@ svg-container object {
 }
 
 nav a {
-  padding-left: 20px;
+  padding-left: 25px;
 }
 
 
@@ -80,7 +80,7 @@ a:hover {
 }
 
 .dashboardlink {
-  width: calc(100% / 5);
+  width: calc(100% /5);
   text-align: right;
 }
 
