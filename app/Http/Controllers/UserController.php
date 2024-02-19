@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -13,18 +15,24 @@ class UserController extends Controller
     }
 
     public function login(Request $request) {
-        $incomingFields = $request -> validate([
-            'loginname' => 'required',
-            'loginpassword' =>'required'
+        $credentials = $request -> validate([
+            'name' => 'required',
+            'password' =>'required',
         ]);
+        
+        $username=$credentials['name'];
+        $password=$credentials['password'];
 
-        if(auth()->attempt(['name' => $incomingFields['loginname'],  'password' => $incomingFields['loginpassword']])) {
-            $request->session()->regenerate();
-            return redirect('/Dashboard');
-        } else {
-            return back()->withErrors(['loginpassword' => 'Invalid username or password.'])->withInput();
+        if (Auth::attempt([
+            'name'=>$username, 
+            'password'=>$password
+            ])) {
+            return redirect()->intended('/Dashboard');
         }
-    }
+        return back()->withErrors([
+            'password' => 'Invalid credentials.',
+        ])->onlyInput('password');
+        }
 
     public function logout(Request $request) {
         auth()->logout();
